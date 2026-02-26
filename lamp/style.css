@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  gap: 150px;
+}
+.btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn1{
+    border-color: rgb(177, 177, 173);
+    background-color: rgb(235, 250, 25);
+}
+.btn2{
+    border-color: rgb(70, 70, 69);
+    background-color: rgb(141, 141, 138);
+}
+.btn3{
+    border-color: rgb(102, 102, 101);
+    background-color: rgb(6, 253, 179);
+}
