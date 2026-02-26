@@ -1,0 +1,187 @@
+/* Reset & Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15,23,42,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #3b82f6;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #cbd5e1;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #3b82f6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2563eb;
+}
+
+/* Sections */
+section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Skills */
+.skill-box {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #1e293b;
+  border-radius: 5px;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  background: #3b82f6;
+}
+
+/* Projects */
+.project-card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 8px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: #3b82f6;
+}
+
+/* Contact */
+.contact p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+}
+
+/* Footer */
+footer {
+  background: #0f172a;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #1e293b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    flex-direction: column;
+    width: 100%;
+    background: #0f172a;
+    transition: 0.3s;
+  }
+
+  nav ul.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
